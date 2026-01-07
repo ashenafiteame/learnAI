@@ -1,9 +1,9 @@
 
 export const dsa3 = {
-    id: "dsa_3_algorithms",
-    title: "DSA 3: Algorithms",
-    type: "lesson",
-    content: `
+  id: "dsa_3_algorithms",
+  title: "DSA 3: Algorithms",
+  type: "lesson",
+  content: `
       <h2>🔄 Section 3: Algorithms</h2>
 
       <h3>Sorting Algorithms</h3>
@@ -153,29 +153,61 @@ function fibOptimized(n) {
     return prev1;
 }</code></pre>
       </div>
+      <div style="margin-top: 3rem; padding: 2rem; background: var(--color-bg-secondary); border-radius: 12px; border: 1px solid var(--color-border);">
+        <h3 style="margin-top: 0; display: flex; align-items: center; gap: 0.5rem;">
+          <span>📚</span> Further Learning & Resources
+        </h3>
+        <p style="color: var(--color-text-secondary); margin-bottom: 1.5rem;">Sharpen your algorithm skills with these world-class resources:</p>
+        
+        <div style="display: grid; grid-template-columns: 1fr; gap: 1rem;">
+          <a href="https://www.youtube.com/watch?v=kPRA0W1kECg" target="_blank" style="text-decoration: none; color: inherit; display: flex; align-items: center; gap: 1rem; padding: 1rem; background: rgba(0,0,0,0.2); border-radius: 8px; transition: transform 0.2s;">
+            <div style="font-size: 1.5rem;">🎥</div>
+            <div>
+              <div style="font-weight: 600; color: var(--color-primary);">Sorting Algorithms in 6 minutes</div>
+              <div style="font-size: 0.85rem; color: var(--color-text-secondary);">A quick visual overview of how different sorting methods compare.</div>
+            </div>
+          </a>
+          
+          <a href="https://www.geeksforgeeks.org/dynamic-programming/" target="_blank" style="text-decoration: none; color: inherit; display: flex; align-items: center; gap: 1rem; padding: 1rem; background: rgba(0,0,0,0.2); border-radius: 8px; transition: transform 0.2s;">
+            <div style="font-size: 1.5rem;">📝</div>
+            <div>
+              <div style="font-weight: 600; color: var(--color-primary);">Dynamic Programming - GfG Guide</div>
+              <div style="font-size: 0.85rem; color: var(--color-text-secondary);">One of the best written guides on mastering DP from scratch.</div>
+            </div>
+          </a>
+          
+          <a href="https://leetcode.com/explore/learn/card/introduction-to-data-structure-binary-search-tree/" target="_blank" style="text-decoration: none; color: inherit; display: flex; align-items: center; gap: 1rem; padding: 1rem; background: rgba(0,0,0,0.2); border-radius: 8px; transition: transform 0.2s;">
+            <div style="font-size: 1.5rem;">🚀</div>
+            <div>
+              <div style="font-weight: 600; color: var(--color-primary);">LeetCode Explore - Algorithms</div>
+              <div style="font-size: 0.85rem; color: var(--color-text-secondary);">Interactive practice for common algorithmic problems and patterns.</div>
+            </div>
+          </a>
+        </div>
+      </div>
   `,
-    quiz: [
-        {
-            id: "dsa_q4",
-            question: "Which sorting algorithm has O(n log n) time complexity in the worst case?",
-            options: [
-                "Quick Sort",
-                "Bubble Sort",
-                "Merge Sort",
-                "Selection Sort"
-            ],
-            correctAnswer: 2
-        },
-        {
-            id: "dsa_q5",
-            question: "What technique is used when a problem can be broken into overlapping subproblems?",
-            options: [
-                "Divide and Conquer",
-                "Dynamic Programming",
-                "Greedy Algorithm",
-                "Brute Force"
-            ],
-            correctAnswer: 1
-        }
-    ]
+  quiz: [
+    {
+      id: "dsa_q4",
+      question: "Which sorting algorithm has O(n log n) time complexity in the worst case?",
+      options: [
+        "Quick Sort",
+        "Bubble Sort",
+        "Merge Sort",
+        "Selection Sort"
+      ],
+      correctAnswer: 2
+    },
+    {
+      id: "dsa_q5",
+      question: "What technique is used when a problem can be broken into overlapping subproblems?",
+      options: [
+        "Divide and Conquer",
+        "Dynamic Programming",
+        "Greedy Algorithm",
+        "Brute Force"
+      ],
+      correctAnswer: 1
+    }
+  ]
 };

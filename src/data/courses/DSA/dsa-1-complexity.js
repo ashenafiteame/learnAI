@@ -74,6 +74,38 @@ function binarySearch(arr, target) {
     return -1;
 }</code></pre>
       </div>
+      <div style="margin-top: 3rem; padding: 2rem; background: var(--color-bg-secondary); border-radius: 12px; border: 1px solid var(--color-border);">
+        <h3 style="margin-top: 0; display: flex; align-items: center; gap: 0.5rem;">
+          <span>📚</span> Further Learning & Resources
+        </h3>
+        <p style="color: var(--color-text-secondary); margin-bottom: 1.5rem;">Master the foundations of algorithm analysis with these resources:</p>
+        
+        <div style="display: grid; grid-template-columns: 1fr; gap: 1rem;">
+          <a href="https://www.youtube.com/watch?v=itn09C2ZB9Y" target="_blank" style="text-decoration: none; color: inherit; display: flex; align-items: center; gap: 1rem; padding: 1rem; background: rgba(0,0,0,0.2); border-radius: 8px; transition: transform 0.2s;">
+            <div style="font-size: 1.5rem;">🎥</div>
+            <div>
+              <div style="font-weight: 600; color: var(--color-primary);">Big O Notation - Full Course (freeCodeCamp)</div>
+              <div style="font-size: 0.85rem; color: var(--color-text-secondary);">A comprehensive visual guide to understanding time and space complexity.</div>
+            </div>
+          </a>
+          
+          <a href="https://www.bigocheatsheet.com/" target="_blank" style="text-decoration: none; color: inherit; display: flex; align-items: center; gap: 1rem; padding: 1rem; background: rgba(0,0,0,0.2); border-radius: 8px; transition: transform 0.2s;">
+            <div style="font-size: 1.5rem;">📄</div>
+            <div>
+              <div style="font-weight: 600; color: var(--color-primary);">Big O Cheat Sheet</div>
+              <div style="font-size: 0.85rem; color: var(--color-text-secondary);">The definitive reference for common algorithm complexities.</div>
+            </div>
+          </a>
+          
+          <a href="https://rob-bell.net/2009/06/a-beginners-guide-to-big-o-notation/" target="_blank" style="text-decoration: none; color: inherit; display: flex; align-items: center; gap: 1rem; padding: 1rem; background: rgba(0,0,0,0.2); border-radius: 8px; transition: transform 0.2s;">
+            <div style="font-size: 1.5rem;">📝</div>
+            <div>
+              <div style="font-weight: 600; color: var(--color-primary);">A Plain English Guide to Big O</div>
+              <div style="font-size: 0.85rem; color: var(--color-text-secondary);">A friendly, non-mathematical introduction to complexity analysis.</div>
+            </div>
+          </a>
+        </div>
+      </div>
   `,
     quiz: [
         {

@@ -1,9 +1,9 @@
 
 export const systemDesign1 = {
-    id: "sd_1_fundamentals",
-    title: "System Design 1: Fundamentals",
-    type: "lesson",
-    content: `
+  id: "sd_1_fundamentals",
+  title: "System Design 1: Fundamentals",
+  type: "lesson",
+  content: `
       <h2>🏗️ Section 1: Fundamentals</h2>
 
       <h3>What is System Design?</h3>
@@ -87,29 +87,61 @@ export const systemDesign1 = {
 // The 99th percentile latency (p99) is often more
 // important than average latency for user experience</code></pre>
       </div>
+      <div style="margin-top: 3rem; padding: 2rem; background: var(--color-bg-secondary); border-radius: 12px; border: 1px solid var(--color-border);">
+        <h3 style="margin-top: 0; display: flex; align-items: center; gap: 0.5rem;">
+          <span>📚</span> Further Learning & Resources
+        </h3>
+        <p style="color: var(--color-text-secondary); margin-bottom: 1.5rem;">Build a rock-solid foundation in large-scale architecture with these guides:</p>
+        
+        <div style="display: grid; grid-template-columns: 1fr; gap: 1rem;">
+          <a href="https://www.youtube.com/watch?v=m8Icp_Cid5o" target="_blank" style="text-decoration: none; color: inherit; display: flex; align-items: center; gap: 1rem; padding: 1rem; background: rgba(0,0,0,0.2); border-radius: 8px; transition: transform 0.2s;">
+            <div style="font-size: 1.5rem;">🎥</div>
+            <div>
+              <div style="font-weight: 600; color: var(--color-primary);">System Design for Beginners Course</div>
+              <div style="font-size: 0.85rem; color: var(--color-text-secondary);">A high-level overview of how modern web applications are structured.</div>
+            </div>
+          </a>
+          
+          <a href="https://github.com/donnemartin/system-design-primer" target="_blank" style="text-decoration: none; color: inherit; display: flex; align-items: center; gap: 1rem; padding: 1rem; background: rgba(0,0,0,0.2); border-radius: 8px; transition: transform 0.2s;">
+            <div style="font-size: 1.5rem;">📖</div>
+            <div>
+              <div style="font-weight: 600; color: var(--color-primary);">The System Design Primer (GitHub)</div>
+              <div style="font-size: 0.85rem; color: var(--color-text-secondary);">The gold standard repo for learning system design from scratch.</div>
+            </div>
+          </a>
+          
+          <a href="https://github.com/binhnguyennus/awesome-scalability" target="_blank" style="text-decoration: none; color: inherit; display: flex; align-items: center; gap: 1rem; padding: 1rem; background: rgba(0,0,0,0.2); border-radius: 8px; transition: transform 0.2s;">
+            <div style="font-size: 1.5rem;">⚖️</div>
+            <div>
+              <div style="font-weight: 600; color: var(--color-primary);">Awesome Scalability</div>
+              <div style="font-size: 0.85rem; color: var(--color-text-secondary);">A curated list of resources for building high-scale, reliable systems.</div>
+            </div>
+          </a>
+        </div>
+      </div>
   `,
-    quiz: [
-        {
-            id: "sd_q1",
-            question: "What is the main difference between vertical and horizontal scaling?",
-            options: [
-                "Vertical scaling adds more machines, horizontal adds more power to existing ones",
-                "Vertical scaling adds power to existing machines, horizontal adds more machines",
-                "Both are the same thing with different names",
-                "Vertical scaling is for databases only"
-            ],
-            correctAnswer: 1
-        },
-        {
-            id: "sd_q4",
-            question: "In the CAP theorem, what does CAP stand for?",
-            options: [
-                "Cache, API, Performance",
-                "Consistency, Availability, Partition tolerance",
-                "Compute, Access, Persistence",
-                "Container, Architecture, Protocol"
-            ],
-            correctAnswer: 1
-        }
-    ]
+  quiz: [
+    {
+      id: "sd_q1",
+      question: "What is the main difference between vertical and horizontal scaling?",
+      options: [
+        "Vertical scaling adds more machines, horizontal adds more power to existing ones",
+        "Vertical scaling adds power to existing machines, horizontal adds more machines",
+        "Both are the same thing with different names",
+        "Vertical scaling is for databases only"
+      ],
+      correctAnswer: 1
+    },
+    {
+      id: "sd_q4",
+      question: "In the CAP theorem, what does CAP stand for?",
+      options: [
+        "Cache, API, Performance",
+        "Consistency, Availability, Partition tolerance",
+        "Compute, Access, Persistence",
+        "Container, Architecture, Protocol"
+      ],
+      correctAnswer: 1
+    }
+  ]
 };

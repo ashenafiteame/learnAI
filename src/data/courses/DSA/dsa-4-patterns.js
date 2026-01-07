@@ -1,9 +1,9 @@
 
 export const dsa4 = {
-    id: "dsa_4_patterns",
-    title: "DSA 4: Problem Patterns",
-    type: "lesson",
-    content: `
+  id: "dsa_4_patterns",
+  title: "DSA 4: Problem Patterns",
+  type: "lesson",
+  content: `
       <h2>🎯 Section 4: Problem Patterns</h2>
 
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; margin: 1.5rem 0;">
@@ -30,18 +30,50 @@ export const dsa4 = {
         <p style="font-size: 1.1rem; margin-bottom: 0;"><strong>DSA = Patterns + Practice</strong><br/>
         <span style="color: var(--color-text-secondary);">Master the fundamental patterns and implement them repeatedly. Consistency beats intensity.</span></p>
       </div>
+      <div style="margin-top: 3rem; padding: 2rem; background: var(--color-bg-secondary); border-radius: 12px; border: 1px solid var(--color-border);">
+        <h3 style="margin-top: 0; display: flex; align-items: center; gap: 0.5rem;">
+          <span>📚</span> Further Learning & Resources
+        </h3>
+        <p style="color: var(--color-text-secondary); margin-bottom: 1.5rem;">The key to acing interviews is pattern recognition. Explore these lists:</p>
+        
+        <div style="display: grid; grid-template-columns: 1fr; gap: 1rem;">
+          <a href="https://www.youtube.com/watch?v=DjYZk8nrXVY" target="_blank" style="text-decoration: none; color: inherit; display: flex; align-items: center; gap: 1rem; padding: 1rem; background: rgba(0,0,0,0.2); border-radius: 8px; transition: transform 0.2s;">
+            <div style="font-size: 1.5rem;">🎥</div>
+            <div>
+              <div style="font-weight: 600; color: var(--color-primary);">Top 7 Coding Patterns (ByteByteGo)</div>
+              <div style="font-size: 0.85rem; color: var(--color-text-secondary);">The most frequent patterns you'll encounter in FAANG interviews.</div>
+            </div>
+          </a>
+          
+          <a href="https://hackernoon.com/14-patterns-to-ace-any-coding-interview-question-2bc0eb361f51" target="_blank" style="text-decoration: none; color: inherit; display: flex; align-items: center; gap: 1rem; padding: 1rem; background: rgba(0,0,0,0.2); border-radius: 8px; transition: transform 0.2s;">
+            <div style="font-size: 1.5rem;">📝</div>
+            <div>
+              <div style="font-weight: 600; color: var(--color-primary);">14 Patterns to Ace Any Interview</div>
+              <div style="font-size: 0.85rem; color: var(--color-text-secondary);">A famous list of problem archetypes and their solutions.</div>
+            </div>
+          </a>
+          
+          <a href="https://www.designgurus.io/course/grokking-the-coding-interview" target="_blank" style="text-decoration: none; color: inherit; display: flex; align-items: center; gap: 1rem; padding: 1rem; background: rgba(0,0,0,0.2); border-radius: 8px; transition: transform 0.2s;">
+            <div style="font-size: 1.5rem;">💼</div>
+            <div>
+              <div style="font-weight: 600; color: var(--color-primary);">Grokking the Coding Interview</div>
+              <div style="font-size: 0.85rem; color: var(--color-text-secondary);">A highly-regarded course for learning pattern-based problem solving.</div>
+            </div>
+          </a>
+        </div>
+      </div>
   `,
-    quiz: [
-        {
-            id: "dsa_q6_new",
-            question: "Which pattern is most useful for finding a subarray of a specific size with variable conditions?",
-            options: [
-                "Binary Search",
-                "Sliding Window",
-                "Merge Intervals",
-                "Fast & Slow Pointers"
-            ],
-            correctAnswer: 1
-        }
-    ]
+  quiz: [
+    {
+      id: "dsa_q6_new",
+      question: "Which pattern is most useful for finding a subarray of a specific size with variable conditions?",
+      options: [
+        "Binary Search",
+        "Sliding Window",
+        "Merge Intervals",
+        "Fast & Slow Pointers"
+      ],
+      correctAnswer: 1
+    }
+  ]
 };

@@ -1,9 +1,9 @@
 
 export const systemDesign2 = {
-    id: "sd_2_components",
-    title: "System Design 2: Core Components",
-    type: "lesson",
-    content: `
+  id: "sd_2_components",
+  title: "System Design 2: Core Components",
+  type: "lesson",
+  content: `
       <h2>🔧 Section 2: Core Components</h2>
 
       <h3>Load Balancers</h3>
@@ -122,40 +122,72 @@ Popular Message Queues:
 • Amazon SQS: Managed service, easy to start
 • Redis Pub/Sub: Simple, in-memory, fast</code></pre>
       </div>
+      <div style="margin-top: 3rem; padding: 2rem; background: var(--color-bg-secondary); border-radius: 12px; border: 1px solid var(--color-border);">
+        <h3 style="margin-top: 0; display: flex; align-items: center; gap: 0.5rem;">
+          <span>📚</span> Further Learning & Resources
+        </h3>
+        <p style="color: var(--color-text-secondary); margin-bottom: 1.5rem;">Deep dive into the building blocks of distributed systems with these resources:</p>
+        
+        <div style="display: grid; grid-template-columns: 1fr; gap: 1rem;">
+          <a href="https://www.youtube.com/watch?v=i53Gi_KlyHg" target="_blank" style="text-decoration: none; color: inherit; display: flex; align-items: center; gap: 1rem; padding: 1rem; background: rgba(0,0,0,0.2); border-radius: 8px; transition: transform 0.2s;">
+            <div style="font-size: 1.5rem;">🎥</div>
+            <div>
+              <div style="font-weight: 600; color: var(--color-primary);">Load Balancers Explained (ByteByteGo)</div>
+              <div style="font-size: 0.85rem; color: var(--color-text-secondary);">A clear, high-level explanation of load balancing and its strategies.</div>
+            </div>
+          </a>
+          
+          <a href="https://www.youtube.com/watch?v=dUMMMG0G1mE" target="_blank" style="text-decoration: none; color: inherit; display: flex; align-items: center; gap: 1rem; padding: 1rem; background: rgba(0,0,0,0.2); border-radius: 8px; transition: transform 0.2s;">
+            <div style="font-size: 1.5rem;">🔥</div>
+            <div>
+              <div style="font-weight: 600; color: var(--color-primary);">SQL vs NoSQL Hub (Fireship)</div>
+              <div style="font-size: 0.85rem; color: var(--color-text-secondary);">A fast-paced guide to choosing the right database for your use case.</div>
+            </div>
+          </a>
+          
+          <a href="https://hazelcast.com/glossary/cache-strategies/" target="_blank" style="text-decoration: none; color: inherit; display: flex; align-items: center; gap: 1rem; padding: 1rem; background: rgba(0,0,0,0.2); border-radius: 8px; transition: transform 0.2s;">
+            <div style="font-size: 1.5rem;">📝</div>
+            <div>
+              <div style="font-weight: 600; color: var(--color-primary);">Guide to Caching Strategies</div>
+              <div style="font-size: 0.85rem; color: var(--color-text-secondary);">An in-depth look at write-through, write-behind, and cache-aside patterns.</div>
+            </div>
+          </a>
+        </div>
+      </div>
   `,
-    quiz: [
-        {
-            id: "sd_q2",
-            question: "Which caching strategy updates the cache immediately after a database write?",
-            options: [
-                "Cache-Aside",
-                "Write-Behind",
-                "Write-Through",
-                "Read-Through"
-            ],
-            correctAnswer: 2
-        },
-        {
-            id: "sd_q3",
-            question: "What is the primary purpose of a load balancer?",
-            options: [
-                "To store data in memory",
-                "To distribute traffic across multiple servers",
-                "To secure the API endpoints",
-                "To manage database connections"
-            ],
-            correctAnswer: 1
-        },
-        {
-            id: "sd_q5",
-            question: "Which of the following is NOT a typical benefit of using message queues?",
-            options: [
-                "Decoupling services",
-                "Handling asynchronous processing",
-                "Reducing database query complexity",
-                "Improving system resilience"
-            ],
-            correctAnswer: 2
-        }
-    ]
+  quiz: [
+    {
+      id: "sd_q2",
+      question: "Which caching strategy updates the cache immediately after a database write?",
+      options: [
+        "Cache-Aside",
+        "Write-Behind",
+        "Write-Through",
+        "Read-Through"
+      ],
+      correctAnswer: 2
+    },
+    {
+      id: "sd_q3",
+      question: "What is the primary purpose of a load balancer?",
+      options: [
+        "To store data in memory",
+        "To distribute traffic across multiple servers",
+        "To secure the API endpoints",
+        "To manage database connections"
+      ],
+      correctAnswer: 1
+    },
+    {
+      id: "sd_q5",
+      question: "Which of the following is NOT a typical benefit of using message queues?",
+      options: [
+        "Decoupling services",
+        "Handling asynchronous processing",
+        "Reducing database query complexity",
+        "Improving system resilience"
+      ],
+      correctAnswer: 2
+    }
+  ]
 };

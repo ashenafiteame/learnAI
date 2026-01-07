@@ -250,6 +250,38 @@ function levelOrder(root) {
     return result;
 }</code></pre>
       </div>
+      <div style="margin-top: 3rem; padding: 2rem; background: var(--color-bg-secondary); border-radius: 12px; border: 1px solid var(--color-border);">
+        <h3 style="margin-top: 0; display: flex; align-items: center; gap: 0.5rem;">
+          <span>📚</span> Further Learning & Resources
+        </h3>
+        <p style="color: var(--color-text-secondary); margin-bottom: 1.5rem;">Visualize and implement core data structures with these essential tools:</p>
+        
+        <div style="display: grid; grid-template-columns: 1fr; gap: 1rem;">
+          <a href="https://visualgo.net/en" target="_blank" style="text-decoration: none; color: inherit; display: flex; align-items: center; gap: 1rem; padding: 1rem; background: rgba(0,0,0,0.2); border-radius: 8px; transition: transform 0.2s;">
+            <div style="font-size: 1.5rem;">🌐</div>
+            <div>
+              <div style="font-weight: 600; color: var(--color-primary);">VisuAlgo</div>
+              <div style="font-size: 0.85rem; color: var(--color-text-secondary);">Interactive animations for visualizing data structures and algorithms.</div>
+            </div>
+          </a>
+          
+          <a href="https://www.youtube.com/watch?v=RBSGKlAvoiM" target="_blank" style="text-decoration: none; color: inherit; display: flex; align-items: center; gap: 1rem; padding: 1rem; background: rgba(0,0,0,0.2); border-radius: 8px; transition: transform 0.2s;">
+            <div style="font-size: 1.5rem;">🎥</div>
+            <div>
+              <div style="font-weight: 600; color: var(--color-primary);">Data Structures Easy to Advanced Course</div>
+              <div style="font-size: 0.85rem; color: var(--color-text-secondary);">An 8-hour masterclass on absolute data structure fundamentals.</div>
+            </div>
+          </a>
+          
+          <a href="https://www.geeksforgeeks.org/common-data-structures-every-programmer-must-know/" target="_blank" style="text-decoration: none; color: inherit; display: flex; align-items: center; gap: 1rem; padding: 1rem; background: rgba(0,0,0,0.2); border-radius: 8px; transition: transform 0.2s;">
+            <div style="font-size: 1.5rem;">📝</div>
+            <div>
+              <div style="font-weight: 600; color: var(--color-primary);">GfG: Top 8 Data Structures</div>
+              <div style="font-size: 0.85rem; color: var(--color-text-secondary);">A clear breakdown of when and why to use each data structure.</div>
+            </div>
+          </a>
+        </div>
+      </div>
   `,
     quiz: [
         {
