@@ -136,7 +136,7 @@ const Layout = ({ children, onHomeClick, onNavigate, activeView, totalModules = 
                   onClick={() => setShowCoursesMenu(!showCoursesMenu)}
                   style={{ display: 'flex', alignItems: 'center', gap: '4px' }}
                 >
-                  📚 Courses
+                  📚 Other Courses
                   <svg
                     viewBox="0 0 24 24"
                     fill="none"
