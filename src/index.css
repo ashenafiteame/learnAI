@@ -1,0 +1,571 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+:root {
+  --color-bg-primary: #0f172a;
+  --color-bg-secondary: #1e293b;
+  --color-text-primary: #f1f5f9;
+  --color-text-secondary: #94a3b8;
+  --color-primary: #8b5cf6;
+  /* Violet 500 */
+  --color-primary-hover: #7c3aed;
+  /* Violet 600 */
+  --color-accent: #38bdf8;
+  /* Sky 400 */
+  --color-success: #22c55e;
+  --color-error: #ef4444;
+  --color-border: #334155;
+
+  /* Jupyter-specific colors */
+  --jupyter-bg: #1a1a2e;
+  --jupyter-cell-bg: #16213e;
+  --jupyter-code-bg: #0d1117;
+  --jupyter-header-bg: #1f2937;
+  --jupyter-border: #30363d;
+  --jupyter-blue: #58a6ff;
+  --jupyter-green: #3fb950;
+  --jupyter-orange: #d29922;
+  --jupyter-red: #f85149;
+  --jupyter-purple: #a371f7;
+  --jupyter-cyan: #39c5cf;
+
+  --font-family: 'Inter', sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
+
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 1.5rem;
+  --spacing-lg: 2rem;
+  --spacing-xl: 3rem;
+
+  --radius-sm: 0.375rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 1rem;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--color-bg-primary);
+  color: var(--color-text-primary);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: var(--color-accent);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+a:hover {
+  color: var(--color-primary);
+}
+
+button {
+  cursor: pointer;
+  font-family: inherit;
+  border: none;
+  border-radius: var(--radius-md);
+  padding: 0.75rem 1.5rem;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  line-height: 1.2;
+  margin-bottom: var(--spacing-sm);
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  background: linear-gradient(to right, var(--color-accent), var(--color-primary));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Utilities */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-md);
+}
+
+.card {
+  background-color: var(--color-bg-secondary);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-lg);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+/* ============================================
+   JUPYTER NOTEBOOK STYLES
+   ============================================ */
+
+.jupyter-notebook {
+  background: var(--jupyter-bg);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow:
+    0 25px 50px -12px rgba(0, 0, 0, 0.5),
+    0 0 0 1px var(--jupyter-border);
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Notebook Header */
+.notebook-header {
+  background: var(--jupyter-header-bg);
+  border-bottom: 1px solid var(--jupyter-border);
+  padding: 0.75rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.notebook-title-bar {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.notebook-icon {
+  font-size: 1.5rem;
+}
+
+.notebook-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin: 0;
+  background: linear-gradient(135deg, var(--jupyter-blue), var(--jupyter-purple));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.notebook-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.toolbar-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.8rem;
+  color: var(--color-text-secondary);
+  padding: 0.375rem 0.75rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 6px;
+}
+
+.kernel-indicator {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--jupyter-green);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+}
+
+/* Notebook Content */
+.notebook-content {
+  padding: 2rem;
+}
+
+.notebook-content.lesson-content {
+  font-size: 1.1rem;
+  line-height: 1.9;
+  color: var(--color-text-primary);
+}
+
+/* Text content styling */
+.notebook-content h2 {
+  font-size: 1.75rem;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--jupyter-border);
+  color: var(--jupyter-blue);
+}
+
+.notebook-content h2:first-child {
+  margin-top: 0;
+}
+
+.notebook-content h3 {
+  font-size: 1.4rem;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+  color: var(--color-text-primary);
+}
+
+.notebook-content h4 {
+  font-size: 1.15rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--jupyter-cyan);
+}
+
+.notebook-content p {
+  margin-bottom: 1.25rem;
+}
+
+.notebook-content ul,
+.notebook-content ol {
+  margin-bottom: 1.25rem;
+  padding-left: 1.5rem;
+}
+
+.notebook-content li {
+  margin-bottom: 0.5rem;
+}
+
+.notebook-content strong {
+  color: var(--jupyter-orange);
+  font-weight: 600;
+}
+
+.notebook-content em {
+  color: var(--jupyter-purple);
+  font-style: italic;
+}
+
+.notebook-content code {
+  font-family: var(--font-mono);
+  font-size: 0.9em;
+  background: rgba(110, 118, 129, 0.25);
+  padding: 0.2em 0.4em;
+  border-radius: 4px;
+  color: var(--jupyter-cyan);
+}
+
+/* Jupyter Code Cell Header */
+.code-cell-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  background: var(--jupyter-code-bg);
+  border: 1px solid var(--jupyter-border);
+  border-bottom: none;
+  border-radius: 8px 8px 0 0;
+  cursor: pointer;
+  user-select: none;
+  transition: background 0.2s;
+  margin-top: 1.5rem;
+}
+
+.code-cell-header:hover {
+  background: rgba(13, 17, 23, 0.9);
+}
+
+.code-cell-header.collapsed {
+  border-radius: 8px;
+  border-bottom: 1px solid var(--jupyter-border);
+  margin-bottom: 1rem;
+}
+
+.cell-indicator {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.cell-bracket {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--jupyter-blue);
+  font-weight: 500;
+}
+
+.cell-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--jupyter-border);
+  border-radius: 6px;
+  color: var(--color-text-secondary);
+  transition: all 0.2s;
+}
+
+.cell-toggle:hover {
+  background: rgba(88, 166, 255, 0.15);
+  border-color: var(--jupyter-blue);
+  color: var(--jupyter-blue);
+}
+
+.toggle-icon {
+  width: 16px;
+  height: 16px;
+  transition: transform 0.3s ease;
+}
+
+.code-cell-header.collapsed .toggle-icon {
+  transform: rotate(-90deg);
+}
+
+/* Jupyter Code Block (pre element) */
+.jupyter-code-block {
+  background: var(--jupyter-code-bg) !important;
+  border: 1px solid var(--jupyter-border);
+  border-top: none;
+  border-radius: 0 0 8px 8px;
+  padding: 1.25rem !important;
+  margin: 0 0 1rem 0 !important;
+  overflow-x: auto;
+  max-height: 2000px;
+  transition: max-height 0.4s ease, opacity 0.3s ease, padding 0.3s ease;
+  opacity: 1;
+}
+
+.jupyter-code-block.collapsed {
+  max-height: 0;
+  opacity: 0;
+  padding: 0 1.25rem !important;
+  border: none;
+  margin: 0 !important;
+}
+
+.jupyter-code-block code {
+  font-family: var(--font-mono) !important;
+  font-size: 0.9rem !important;
+  line-height: 1.7 !important;
+  color: #c9d1d9 !important;
+  background: transparent !important;
+  padding: 0 !important;
+  display: block;
+  white-space: pre;
+}
+
+/* Syntax Highlighting Overrides (highlight.js github-dark theme enhancements) */
+.notebook-content pre code {
+  color: #c9d1d9;
+}
+
+.notebook-content pre code.hljs {
+  background: transparent !important;
+  padding: 0 !important;
+}
+
+/* Keywords: function, const, let, var, if, else, return, for, while, class, etc. */
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-built_in,
+.hljs-name,
+.hljs-tag {
+  color: #ff7b72 !important;
+}
+
+/* Strings */
+.hljs-string,
+.hljs-title.class_.inherited__,
+.hljs-template-variable,
+.hljs-variable,
+.hljs-quote {
+  color: #a5d6ff !important;
+}
+
+/* Numbers */
+.hljs-number,
+.hljs-literal {
+  color: #79c0ff !important;
+}
+
+/* Functions */
+.hljs-title.function_,
+.hljs-title,
+.hljs-section {
+  color: #d2a8ff !important;
+}
+
+/* Comments */
+.hljs-comment,
+.hljs-quote {
+  color: #8b949e !important;
+  font-style: italic;
+}
+
+/* Class names and types */
+.hljs-type,
+.hljs-class .hljs-title,
+.hljs-title.class_ {
+  color: #ffa657 !important;
+}
+
+/* Operators and punctuation */
+.hljs-operator,
+.hljs-punctuation {
+  color: #c9d1d9 !important;
+}
+
+/* Properties and attributes */
+.hljs-attr,
+.hljs-attribute,
+.hljs-symbol {
+  color: #7ee787 !important;
+}
+
+/* Params */
+.hljs-params {
+  color: #c9d1d9 !important;
+}
+
+/* Boolean */
+.hljs-literal {
+  color: #79c0ff !important;
+}
+
+/* Special */
+.hljs-regexp {
+  color: #7ee787 !important;
+}
+
+.hljs-meta {
+  color: #ffa657 !important;
+}
+
+.hljs-doctag {
+  color: #ff7b72 !important;
+}
+
+/* Notebook Footer */
+.notebook-footer {
+  padding: 1.5rem 2rem;
+  border-top: 1px solid var(--jupyter-border);
+  background: var(--jupyter-header-bg);
+  display: flex;
+  justify-content: flex-end;
+}
+
+.complete-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.875rem 1.75rem;
+  background: linear-gradient(135deg, var(--color-primary), var(--jupyter-blue));
+  color: white;
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(139, 92, 246, 0.3);
+}
+
+.complete-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(139, 92, 246, 0.4);
+}
+
+.complete-btn svg {
+  width: 20px;
+  height: 20px;
+  transition: transform 0.3s;
+}
+
+.complete-btn:hover svg {
+  transform: translateX(4px);
+}
+
+/* Info/Note Boxes in Content */
+.notebook-content>div[style*="background"] {
+  border-radius: 10px !important;
+  margin: 1.5rem 0 !important;
+}
+
+/* Grid layouts in content */
+.notebook-content>div[style*="grid"] {
+  margin: 1.5rem 0;
+}
+
+/* Scrollbar styling */
+.notebook-content::-webkit-scrollbar,
+.jupyter-cell pre::-webkit-scrollbar {
+  height: 8px;
+  width: 8px;
+}
+
+.notebook-content::-webkit-scrollbar-track,
+.jupyter-cell pre::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 4px;
+}
+
+.notebook-content::-webkit-scrollbar-thumb,
+.jupyter-cell pre::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 4px;
+}
+
+.notebook-content::-webkit-scrollbar-thumb:hover,
+.jupyter-cell pre::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .jupyter-notebook {
+    border-radius: 0;
+  }
+
+  .notebook-header {
+    flex-direction: column;
+    gap: 0.75rem;
+    text-align: center;
+  }
+
+  .notebook-content {
+    padding: 1.25rem;
+  }
+
+  .notebook-content.lesson-content {
+    font-size: 1rem;
+  }
+
+  .notebook-content h2 {
+    font-size: 1.5rem;
+  }
+
+  .notebook-content h3 {
+    font-size: 1.25rem;
+  }
+
+  .notebook-content>div[style*="grid-template-columns: 1fr 1fr"] {
+    grid-template-columns: 1fr !important;
+  }
+}
