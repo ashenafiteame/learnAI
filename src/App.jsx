@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react'
 import { AuthProvider, useAuth } from './context/AuthContext'
 import Layout from './components/Layout'
@@ -7,7 +6,7 @@ import LessonView from './components/LessonView'
 import QuizView from './components/QuizView'
 import HomePage from './components/HomePage'
 import CoursePage from './components/CoursePage'
-import { journey, flatCurriculum } from './data/journey'
+import { journey, flatCurriculum as flatAICurriculum } from './data/journey'
 import { dsaJourney, flatDSACurriculum } from './data/courses/DSA/dsa-journey'
 import { systemDesignJourney, flatSystemDesignCurriculum } from './data/courses/SystemDesign/system-design-journey'
 import { pythonJourney, flatPythonCurriculum } from './data/courses/Python/python-journey'
@@ -17,6 +16,20 @@ import { postgresJourney, flatPostgresCurriculum } from './data/courses/PostgreS
 import { mongoJourney, flatMongoCurriculum } from './data/courses/MongoDB/mongo-journey'
 import { redisJourney, flatRedisCurriculum } from './data/courses/Redis/redis-journey'
 import { kafkaJourney, flatKafkaCurriculum } from './data/courses/Kafka/kafka-journey'
+
+// Combine all curricula into a single master list for routing
+const flatCurriculum = [
+  ...flatAICurriculum,
+  ...flatDSACurriculum,
+  ...flatSystemDesignCurriculum,
+  ...flatPythonCurriculum,
+  ...flatJavaCurriculum,
+  ...flatReactCurriculum,
+  ...flatPostgresCurriculum,
+  ...flatMongoCurriculum,
+  ...flatRedisCurriculum,
+  ...flatKafkaCurriculum
+];
 
 // Course configurations for easy management
 const courseConfigs = {

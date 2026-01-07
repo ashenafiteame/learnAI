@@ -1318,3 +1318,7 @@ h1 {
     gap: 1.5rem;
   }
 }
+/* Module Item Hover Effect */
+.module-item:hover {
+  background: rgba(255, 255, 255, 0.05) !important;
+}
