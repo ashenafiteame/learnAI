@@ -69,33 +69,6 @@ const CoursePage = ({ title, description, journey, flatCurriculum, onModuleClick
                         {description}
                     </p>
                 </div>
-                {!isFinished && (
-                    <button
-                        onClick={handleMainAction}
-                        className="cta-primary"
-                        style={{
-                            padding: '1rem 2rem',
-                            fontSize: '1.1rem',
-                            boxShadow: '0 4px 20px rgba(139, 92, 246, 0.4)',
-                            whiteSpace: 'nowrap'
-                        }}
-                    >
-                        {buttonLabel}
-                    </button>
-                )}
-                {isFinished && (
-                    <button
-                        onClick={handleMainAction}
-                        className="cta-secondary"
-                        style={{
-                            padding: '1rem 2rem',
-                            fontSize: '1.1rem',
-                            whiteSpace: 'nowrap'
-                        }}
-                    >
-                        Review Course
-                    </button>
-                )}
             </header>
 
             {/* Progress Bar */}
