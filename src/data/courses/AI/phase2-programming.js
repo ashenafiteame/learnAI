@@ -8,10 +8,10 @@
  */
 
 export const phase2 = {
-    id: 3,
-    title: "Phase 2: Programming Foundations for AI",
-    type: "lesson",
-    content: `
+  id: 3,
+  title: "Phase 2: Programming Foundations for AI",
+  type: "lesson",
+  content: `
       <h2>Python is Mandatory for AI</h2>
       
       <p>Even if you're an expert in Java, JavaScript, or C++, AI lives in Python. The entire ecosystem — TensorFlow, PyTorch, scikit-learn, Hugging Face — is Python-first. Let's master the essentials.</p>
@@ -520,90 +520,122 @@ clean_df = clean_dataset('raw_data.csv')</code></pre>
           </div>
         </div>
       </div>
+      <div style="margin-top: 3rem; padding: 2rem; background: var(--color-bg-secondary); border-radius: 12px; border: 1px solid var(--color-border);">
+        <h3 style="margin-top: 0; display: flex; align-items: center; gap: 0.5rem;">
+          <span>📚</span> Further Learning & Resources
+        </h3>
+        <p style="color: var(--color-text-secondary); margin-bottom: 1.5rem;">Master the tools of the trade with these essential resources:</p>
+        
+        <div style="display: grid; grid-template-columns: 1fr; gap: 1rem;">
+          <a href="https://docs.python.org/3/tutorial/index.html" target="_blank" style="text-decoration: none; color: inherit; display: flex; align-items: center; gap: 1rem; padding: 1rem; background: rgba(0,0,0,0.2); border-radius: 8px; transition: transform 0.2s;">
+            <div style="font-size: 1.5rem;">🐍</div>
+            <div>
+              <div style="font-weight: 600; color: var(--color-primary);">The Python Tutorial (Official Docs)</div>
+              <div style="font-size: 0.85rem; color: var(--color-text-secondary);">The definitive guide to Python's syntax and core concepts.</div>
+            </div>
+          </a>
+          
+          <a href="https://numpy.org/doc/stable/user/quickstart.html" target="_blank" style="text-decoration: none; color: inherit; display: flex; align-items: center; gap: 1rem; padding: 1rem; background: rgba(0,0,0,0.2); border-radius: 8px; transition: transform 0.2s;">
+            <div style="font-size: 1.5rem;">🔢</div>
+            <div>
+              <div style="font-weight: 600; color: var(--color-primary);">NumPy Quickstart Guide</div>
+              <div style="font-size: 0.85rem; color: var(--color-text-secondary);">Learn how to manipulate arrays and perform vectorized operations.</div>
+            </div>
+          </a>
+          
+          <a href="https://pandas.pydata.org/docs/user_guide/10min.html" target="_blank" style="text-decoration: none; color: inherit; display: flex; align-items: center; gap: 1rem; padding: 1rem; background: rgba(0,0,0,0.2); border-radius: 8px; transition: transform 0.2s;">
+            <div style="font-size: 1.5rem;">🐼</div>
+            <div>
+              <div style="font-weight: 600; color: var(--color-primary);">10 Minutes to Pandas</div>
+              <div style="font-size: 0.85rem; color: var(--color-text-secondary);">A quick introduction to DataFrames and data manipulation.</div>
+            </div>
+          </a>
+        </div>
+      </div>
     `,
-    quiz: [
-        {
-            id: "p2q1",
-            question: "What does the @ operator do in NumPy?",
-            options: [
-                "Element-wise addition",
-                "Matrix multiplication",
-                "Element-wise division",
-                "Defines a decorator"
-            ],
-            correctAnswer: 1
-        },
-        {
-            id: "p2q2",
-            question: "Which Python library is the industry standard for data cleaning and manipulation?",
-            options: ["NumPy", "Pandas", "Matplotlib", "Scikit-learn"],
-            correctAnswer: 1
-        },
-        {
-            id: "p2q3",
-            question: "What is the main advantage of NumPy's vectorized operations over Python loops?",
-            options: [
-                "They use less memory",
-                "They are 100-1000x faster due to optimized C code",
-                "They are easier to read",
-                "They work with any data type"
-            ],
-            correctAnswer: 1
-        },
-        {
-            id: "p2q4",
-            question: "What does df.dropna() do in Pandas?",
-            options: [
-                "Drops all columns",
-                "Removes rows containing missing values (NaN)",
-                "Sorts the dataframe",
-                "Removes duplicate rows"
-            ],
-            correctAnswer: 1
-        },
-        {
-            id: "p2q5",
-            question: "Why are virtual environments important for AI projects?",
-            options: [
-                "They make Python run faster",
-                "They allow different projects to have different package versions",
-                "They are required by NumPy",
-                "They automatically clean data"
-            ],
-            correctAnswer: 1
-        },
-        {
-            id: "p2q6",
-            question: "In the expression X @ W where X is (10, 3) and W is (3, 4), what is the output shape?",
-            options: [
-                "(10, 4)",
-                "(3, 3)",
-                "(10, 3)",
-                "(4, 10)"
-            ],
-            correctAnswer: 0
-        },
-        {
-            id: "p2q7",
-            question: "What is the Pythonic way to transform a list of numbers by squaring each element?",
-            options: [
-                "for loop with append",
-                "List comprehension: [x**2 for x in numbers]",
-                "while loop",
-                "Using eval()"
-            ],
-            correctAnswer: 1
-        },
-        {
-            id: "p2q8",
-            question: "How do you handle the string '60,000' in a salary column to convert it to a number?",
-            options: [
-                "Just use astype(int)",
-                "Use str.replace(',', '') then pd.to_numeric()",
-                "It converts automatically",
-                "Use dropna()"
-            ],
-            correctAnswer: 1
-        }
-    ]
+  quiz: [
+    {
+      id: "p2q1",
+      question: "What does the @ operator do in NumPy?",
+      options: [
+        "Element-wise addition",
+        "Matrix multiplication",
+        "Element-wise division",
+        "Defines a decorator"
+      ],
+      correctAnswer: 1
+    },
+    {
+      id: "p2q2",
+      question: "Which Python library is the industry standard for data cleaning and manipulation?",
+      options: ["NumPy", "Pandas", "Matplotlib", "Scikit-learn"],
+      correctAnswer: 1
+    },
+    {
+      id: "p2q3",
+      question: "What is the main advantage of NumPy's vectorized operations over Python loops?",
+      options: [
+        "They use less memory",
+        "They are 100-1000x faster due to optimized C code",
+        "They are easier to read",
+        "They work with any data type"
+      ],
+      correctAnswer: 1
+    },
+    {
+      id: "p2q4",
+      question: "What does df.dropna() do in Pandas?",
+      options: [
+        "Drops all columns",
+        "Removes rows containing missing values (NaN)",
+        "Sorts the dataframe",
+        "Removes duplicate rows"
+      ],
+      correctAnswer: 1
+    },
+    {
+      id: "p2q5",
+      question: "Why are virtual environments important for AI projects?",
+      options: [
+        "They make Python run faster",
+        "They allow different projects to have different package versions",
+        "They are required by NumPy",
+        "They automatically clean data"
+      ],
+      correctAnswer: 1
+    },
+    {
+      id: "p2q6",
+      question: "In the expression X @ W where X is (10, 3) and W is (3, 4), what is the output shape?",
+      options: [
+        "(10, 4)",
+        "(3, 3)",
+        "(10, 3)",
+        "(4, 10)"
+      ],
+      correctAnswer: 0
+    },
+    {
+      id: "p2q7",
+      question: "What is the Pythonic way to transform a list of numbers by squaring each element?",
+      options: [
+        "for loop with append",
+        "List comprehension: [x**2 for x in numbers]",
+        "while loop",
+        "Using eval()"
+      ],
+      correctAnswer: 1
+    },
+    {
+      id: "p2q8",
+      question: "How do you handle the string '60,000' in a salary column to convert it to a number?",
+      options: [
+        "Just use astype(int)",
+        "Use str.replace(',', '') then pd.to_numeric()",
+        "It converts automatically",
+        "Use dropna()"
+      ],
+      correctAnswer: 1
+    }
+  ]
 };

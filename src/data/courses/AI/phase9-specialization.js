@@ -332,6 +332,38 @@ class FraudMLPipeline:
           <li><strong>All paths</strong> benefit from strong software engineering fundamentals</li>
         </ul>
       </div>
+      <div style="margin-top: 3rem; padding: 2rem; background: var(--color-bg-secondary); border-radius: 12px; border: 1px solid var(--color-border);">
+        <h3 style="margin-top: 0; display: flex; align-items: center; gap: 0.5rem;">
+          <span>📚</span> Further Learning & Resources
+        </h3>
+        <p style="color: var(--color-text-secondary); margin-bottom: 1.5rem;">The road doesn't end here. Map out your career with these specialization guides:</p>
+        
+        <div style="display: grid; grid-template-columns: 1fr; gap: 1rem;">
+          <a href="https://github.com/steven-tey/ai-engineer-roadmap" target="_blank" style="text-decoration: none; color: inherit; display: flex; align-items: center; gap: 1rem; padding: 1rem; background: rgba(0,0,0,0.2); border-radius: 8px; transition: transform 0.2s;">
+            <div style="font-size: 1.5rem;">🗺️</div>
+            <div>
+              <div style="font-weight: 600; color: var(--color-primary);">AI Engineer Roadmap (GitHub)</div>
+              <div style="font-size: 0.85rem; color: var(--color-text-secondary);">A community-driven roadmap for becoming a modern AI Engineer.</div>
+            </div>
+          </a>
+          
+          <a href="https://madewithml.com/" target="_blank" style="text-decoration: none; color: inherit; display: flex; align-items: center; gap: 1rem; padding: 1rem; background: rgba(0,0,0,0.2); border-radius: 8px; transition: transform 0.2s;">
+            <div style="font-size: 1.5rem;">🚀</div>
+            <div>
+              <div style="font-weight: 600; color: var(--color-primary);">Made With ML</div>
+              <div style="font-size: 0.85rem; color: var(--color-text-secondary);">An excellent guide on taking models from design to production.</div>
+            </div>
+          </a>
+          
+          <a href="https://www.deeplearning.ai/resources/career-guide/" target="_blank" style="text-decoration: none; color: inherit; display: flex; align-items: center; gap: 1rem; padding: 1rem; background: rgba(0,0,0,0.2); border-radius: 8px; transition: transform 0.2s;">
+            <div style="font-size: 1.5rem;">💼</div>
+            <div>
+              <div style="font-weight: 600; color: var(--color-primary);">AI Career Guide (DeepLearning.AI)</div>
+              <div style="font-size: 0.85rem; color: var(--color-text-secondary);">Expert advice on landing a job in the AI industry.</div>
+            </div>
+          </a>
+        </div>
+      </div>
     `,
   quiz: [
     {

@@ -470,6 +470,38 @@ print(result["result"])</code></pre>
           <li><strong>Prompt engineering</strong> = the skill of asking LLMs the right way</li>
         </ul>
       </div>
+      <div style="margin-top: 3rem; padding: 2rem; background: var(--color-bg-secondary); border-radius: 12px; border: 1px solid var(--color-border);">
+        <h3 style="margin-top: 0; display: flex; align-items: center; gap: 0.5rem;">
+          <span>📚</span> Further Learning & Resources
+        </h3>
+        <p style="color: var(--color-text-secondary); margin-bottom: 1.5rem;">The AI landscape changes weekly. Stay ahead with these top-tier resources:</p>
+        
+        <div style="display: grid; grid-template-columns: 1fr; gap: 1rem;">
+          <a href="https://huggingface.co/learn/nlp-course" target="_blank" style="text-decoration: none; color: inherit; display: flex; align-items: center; gap: 1rem; padding: 1rem; background: rgba(0,0,0,0.2); border-radius: 8px; transition: transform 0.2s;">
+            <div style="font-size: 1.5rem;">🤗</div>
+            <div>
+              <div style="font-weight: 600; color: var(--color-primary);">The Hugging Face NLP Course</div>
+              <div style="font-size: 0.85rem; color: var(--color-text-secondary);">The definitive guide to using Transformers and the HF ecosystem.</div>
+            </div>
+          </a>
+          
+          <a href="https://www.deeplearning.ai/courses/generative-ai-with-large-language-models/" target="_blank" style="text-decoration: none; color: inherit; display: flex; align-items: center; gap: 1rem; padding: 1rem; background: rgba(0,0,0,0.2); border-radius: 8px; transition: transform 0.2s;">
+            <div style="font-size: 1.5rem;">🤖</div>
+            <div>
+              <div style="font-weight: 600; color: var(--color-primary);">Generative AI with LLMs (DeepLearning.AI)</div>
+              <div style="font-size: 0.85rem; color: var(--color-text-secondary);">Deep dive into fine-tuning, RLHF, and the LLM lifecycle.</div>
+            </div>
+          </a>
+          
+          <a href="https://python.langchain.com/docs/get_started/introduction" target="_blank" style="text-decoration: none; color: inherit; display: flex; align-items: center; gap: 1rem; padding: 1rem; background: rgba(0,0,0,0.2); border-radius: 8px; transition: transform 0.2s;">
+            <div style="font-size: 1.5rem;">🦜</div>
+            <div>
+              <div style="font-weight: 600; color: var(--color-primary);">LangChain Documentation</div>
+              <div style="font-size: 0.85rem; color: var(--color-text-secondary);">The most popular framework for building LLM-powered applications.</div>
+            </div>
+          </a>
+        </div>
+      </div>
     `,
   quiz: [
     {

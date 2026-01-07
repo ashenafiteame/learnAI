@@ -381,23 +381,39 @@ for epoch in range(100):
 # After training, w has learned the best value!</code></pre>
       </div>
 
-      <div style="background: linear-gradient(135deg, rgba(139, 92, 246, 0.15), rgba(56, 189, 248, 0.15)); padding: 1.5rem; border-radius: 12px; margin-top: 2rem; text-align: center;">
-        <h3 style="margin-top: 0;">🎓 Key Takeaways</h3>
-        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; text-align: left; margin-top: 1rem;">
-          <div>
-            <strong style="color: var(--color-primary);">Linear Algebra</strong>
-            <p style="font-size: 0.85rem; margin: 0.25rem 0 0;">Neural networks are matrix multiplications: output = W × input + b</p>
-          </div>
-          <div>
-            <strong style="color: var(--color-accent);">Statistics</strong>
-            <p style="font-size: 0.85rem; margin: 0.25rem 0 0;">Probability helps us reason about uncertainty and avoid overfitting</p>
-          </div>
-          <div>
-            <strong style="color: var(--color-success);">Calculus</strong>
-            <p style="font-size: 0.85rem; margin: 0.25rem 0 0;">Training = minimizing loss by following gradients downhill</p>
-          </div>
+      <div style="margin-top: 3rem; padding: 2rem; background: var(--color-bg-secondary); border-radius: 12px; border: 1px solid var(--color-border);">
+        <h3 style="margin-top: 0; display: flex; align-items: center; gap: 0.5rem;">
+          <span>📐</span> Further Learning & Resources
+        </h3>
+        <p style="color: var(--color-text-secondary); margin-bottom: 1.5rem;">The math can be challenging, but these resources make it intuitive:</p>
+        
+        <div style="display: grid; grid-template-columns: 1fr; gap: 1rem;">
+          <a href="https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab" target="_blank" style="text-decoration: none; color: inherit; display: flex; align-items: center; gap: 1rem; padding: 1rem; background: rgba(0,0,0,0.2); border-radius: 8px; transition: transform 0.2s;">
+            <div style="font-size: 1.5rem;">📽️</div>
+            <div>
+              <div style="font-weight: 600; color: var(--color-primary);">Essence of Linear Algebra (3Blue1Brown)</div>
+              <div style="font-size: 0.85rem; color: var(--color-text-secondary);">The absolute best visual explanation of vectors and matrices.</div>
+            </div>
+          </a>
+          
+          <a href="https://www.khanacademy.org/math/linear-algebra" target="_blank" style="text-decoration: none; color: inherit; display: flex; align-items: center; gap: 1rem; padding: 1rem; background: rgba(0,0,0,0.2); border-radius: 8px; transition: transform 0.2s;">
+            <div style="font-size: 1.5rem;">🏠</div>
+            <div>
+              <div style="font-weight: 600; color: var(--color-primary);">Khan Academy: Linear Algebra</div>
+              <div style="font-size: 0.85rem; color: var(--color-text-secondary);">Great practice problems for mastering matrix operations.</div>
+            </div>
+          </a>
+          
+          <a href="https://www.youtube.com/playlist?list=PLZHQObOWTQDMsr9K-rj53DwVRMYO3t5Yr" target="_blank" style="text-decoration: none; color: inherit; display: flex; align-items: center; gap: 1rem; padding: 1rem; background: rgba(0,0,0,0.2); border-radius: 8px; transition: transform 0.2s;">
+            <div style="font-size: 1.5rem;">📈</div>
+            <div>
+              <div style="font-weight: 600; color: var(--color-primary);">Essence of Calculus (3Blue1Brown)</div>
+              <div style="font-size: 0.85rem; color: var(--color-text-secondary);">Understand derivatives and the chain rule intuitively.</div>
+            </div>
+          </a>
         </div>
       </div>
+    
     `,
   quiz: [
     {

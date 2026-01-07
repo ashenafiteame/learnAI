@@ -10,10 +10,10 @@
  */
 
 export const phase8 = {
-    id: 9,
-    title: "Phase 8: Ethics, Safety & Business",
-    type: "lesson",
-    content: `
+  id: 9,
+  title: "Phase 8: Ethics, Safety & Business",
+  type: "lesson",
+  content: `
       <h2>AI Responsibility</h2>
       <p>AI systems can make decisions affecting millions of people — loans, medical diagnoses, hiring, content moderation. With great power comes great responsibility. Understanding ethics isn't optional; it's essential for any AI practitioner.</p>
 
@@ -431,84 +431,116 @@ embeddings = client.embeddings.create(
           <li><strong>Human oversight:</strong> High-stakes decisions need human review</li>
         </ul>
       </div>
+      <div style="margin-top: 3rem; padding: 2rem; background: var(--color-bg-secondary); border-radius: 12px; border: 1px solid var(--color-border);">
+        <h3 style="margin-top: 0; display: flex; align-items: center; gap: 0.5rem;">
+          <span>📚</span> Further Learning & Resources
+        </h3>
+        <p style="color: var(--color-text-secondary); margin-bottom: 1.5rem;">Responsible AI is a lifelong journey. Explore these critical resources:</p>
+        
+        <div style="display: grid; grid-template-columns: 1fr; gap: 1rem;">
+          <a href="https://www.partnershiponai.org/" target="_blank" style="text-decoration: none; color: inherit; display: flex; align-items: center; gap: 1rem; padding: 1rem; background: rgba(0,0,0,0.2); border-radius: 8px; transition: transform 0.2s;">
+            <div style="font-size: 1.5rem;">🤝</div>
+            <div>
+              <div style="font-weight: 600; color: var(--color-primary);">Partnership on AI</div>
+              <div style="font-size: 0.85rem; color: var(--color-text-secondary);">A non-profit community exploring the responsible use of AI.</div>
+            </div>
+          </a>
+          
+          <a href="https://www.safe.ai/" target="_blank" style="text-decoration: none; color: inherit; display: flex; align-items: center; gap: 1rem; padding: 1rem; background: rgba(0,0,0,0.2); border-radius: 8px; transition: transform 0.2s;">
+            <div style="font-size: 1.5rem;">🛡️</div>
+            <div>
+              <div style="font-weight: 600; color: var(--color-primary);">Center for AI Safety</div>
+              <div style="font-size: 0.85rem; color: var(--color-text-secondary);">Researching the long-term impacts and existential risks of AI.</div>
+            </div>
+          </a>
+          
+          <a href="https://www.microsoft.com/en-us/ai/responsible-ai" target="_blank" style="text-decoration: none; color: inherit; display: flex; align-items: center; gap: 1rem; padding: 1rem; background: rgba(0,0,0,0.2); border-radius: 8px; transition: transform 0.2s;">
+            <div style="font-size: 1.5rem;">⚖️</div>
+            <div>
+              <div style="font-weight: 600; color: var(--color-primary);">Microsoft Responsible AI Principles</div>
+              <div style="font-size: 0.85rem; color: var(--color-text-secondary);">A framework for building trustworthy AI systems in an enterprise.</div>
+            </div>
+          </a>
+        </div>
+      </div>
     `,
-    quiz: [
-        {
-            id: "p8q1",
-            question: "What is an 'AI Hallucination'?",
-            options: [
-                "The AI entering a sleep state",
-                "Confidently generating factually incorrect or nonsensical information",
-                "The AI predicting the future with 100% accuracy",
-                "A visual glitch in the UI"
-            ],
-            correctAnswer: 1
-        },
-        {
-            id: "p8q2",
-            question: "Why is bias a critical concern in AI deployment?",
-            options: [
-                "It makes the code harder to read",
-                "It can lead to unfair or discriminatory real-world decisions",
-                "It increases the cloud bill",
-                "It only affects small models"
-            ],
-            correctAnswer: 1
-        },
-        {
-            id: "p8q3",
-            question: "What is 'representation bias' in AI?",
-            options: [
-                "The model being too large",
-                "Some groups being underrepresented in the training data",
-                "The model running too slowly",
-                "Using too many features"
-            ],
-            correctAnswer: 1
-        },
-        {
-            id: "p8q4",
-            question: "What is the '80% rule' in fairness testing?",
-            options: [
-                "The model must be 80% accurate",
-                "The positive rate of disadvantaged groups should be at least 80% of the advantaged group",
-                "80% of the data should be used for training",
-                "The model should run in 80% of the time"
-            ],
-            correctAnswer: 1
-        },
-        {
-            id: "p8q5",
-            question: "How can you reduce LLM hallucinations?",
-            options: [
-                "Train for longer",
-                "Ground responses with RAG is and require citations",
-                "Use larger context windows",
-                "Remove all system prompts"
-            ],
-            correctAnswer: 1
-        },
-        {
-            id: "p8q6",
-            question: "What is 'human-in-the-loop' AI?",
-            options: [
-                "AI that only works with human data",
-                "Requiring human review for low-confidence or high-stakes decisions",
-                "AI that runs on human-powered servers",
-                "Training AI using only human feedback"
-            ],
-            correctAnswer: 1
-        },
-        {
-            id: "p8q7",
-            question: "Which is NOT a common cost optimization strategy for LLM APIs?",
-            options: [
-                "Caching frequent queries",
-                "Using cheaper models for simple tasks",
-                "Always using the largest model available",
-                "Setting max_tokens limits"
-            ],
-            correctAnswer: 2
-        }
-    ]
+  quiz: [
+    {
+      id: "p8q1",
+      question: "What is an 'AI Hallucination'?",
+      options: [
+        "The AI entering a sleep state",
+        "Confidently generating factually incorrect or nonsensical information",
+        "The AI predicting the future with 100% accuracy",
+        "A visual glitch in the UI"
+      ],
+      correctAnswer: 1
+    },
+    {
+      id: "p8q2",
+      question: "Why is bias a critical concern in AI deployment?",
+      options: [
+        "It makes the code harder to read",
+        "It can lead to unfair or discriminatory real-world decisions",
+        "It increases the cloud bill",
+        "It only affects small models"
+      ],
+      correctAnswer: 1
+    },
+    {
+      id: "p8q3",
+      question: "What is 'representation bias' in AI?",
+      options: [
+        "The model being too large",
+        "Some groups being underrepresented in the training data",
+        "The model running too slowly",
+        "Using too many features"
+      ],
+      correctAnswer: 1
+    },
+    {
+      id: "p8q4",
+      question: "What is the '80% rule' in fairness testing?",
+      options: [
+        "The model must be 80% accurate",
+        "The positive rate of disadvantaged groups should be at least 80% of the advantaged group",
+        "80% of the data should be used for training",
+        "The model should run in 80% of the time"
+      ],
+      correctAnswer: 1
+    },
+    {
+      id: "p8q5",
+      question: "How can you reduce LLM hallucinations?",
+      options: [
+        "Train for longer",
+        "Ground responses with RAG is and require citations",
+        "Use larger context windows",
+        "Remove all system prompts"
+      ],
+      correctAnswer: 1
+    },
+    {
+      id: "p8q6",
+      question: "What is 'human-in-the-loop' AI?",
+      options: [
+        "AI that only works with human data",
+        "Requiring human review for low-confidence or high-stakes decisions",
+        "AI that runs on human-powered servers",
+        "Training AI using only human feedback"
+      ],
+      correctAnswer: 1
+    },
+    {
+      id: "p8q7",
+      question: "Which is NOT a common cost optimization strategy for LLM APIs?",
+      options: [
+        "Caching frequent queries",
+        "Using cheaper models for simple tasks",
+        "Always using the largest model available",
+        "Setting max_tokens limits"
+      ],
+      correctAnswer: 2
+    }
+  ]
 };

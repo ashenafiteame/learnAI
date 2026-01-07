@@ -432,6 +432,38 @@ for text in texts:
           <li><strong>Pre-trained models</strong> (Hugging Face) can save months of training time</li>
         </ul>
       </div>
+      <div style="margin-top: 3rem; padding: 2rem; background: var(--color-bg-secondary); border-radius: 12px; border: 1px solid var(--color-border);">
+        <h3 style="margin-top: 0; display: flex; align-items: center; gap: 0.5rem;">
+          <span>📚</span> Further Learning & Resources
+        </h3>
+        <p style="color: var(--color-text-secondary); margin-bottom: 1.5rem;">Ready to build your own neural networks? Explore these definitive guides:</p>
+        
+        <div style="display: grid; grid-template-columns: 1fr; gap: 1rem;">
+          <a href="https://pytorch.org/tutorials/" target="_blank" style="text-decoration: none; color: inherit; display: flex; align-items: center; gap: 1rem; padding: 1rem; background: rgba(0,0,0,0.2); border-radius: 8px; transition: transform 0.2s;">
+            <div style="font-size: 1.5rem;">🔥</div>
+            <div>
+              <div style="font-weight: 600; color: var(--color-primary);">PyTorch Learning Path</div>
+              <div style="font-size: 0.85rem; color: var(--color-text-secondary);">From tensors to production-ready neural networks.</div>
+            </div>
+          </a>
+          
+          <a href="https://www.deeplearning.ai/courses/neural-networks-deep-learning/" target="_blank" style="text-decoration: none; color: inherit; display: flex; align-items: center; gap: 1rem; padding: 1rem; background: rgba(0,0,0,0.2); border-radius: 8px; transition: transform 0.2s;">
+            <div style="font-size: 1.5rem;">🎓</div>
+            <div>
+              <div style="font-weight: 600; color: var(--color-primary);">Neural Networks and Deep Learning (Andrew Ng)</div>
+              <div style="font-size: 0.85rem; color: var(--color-text-secondary);">The foundational course that demystifies deep learning math.</div>
+            </div>
+          </a>
+          
+          <a href="https://course.fast.ai/" target="_blank" style="text-decoration: none; color: inherit; display: flex; align-items: center; gap: 1rem; padding: 1rem; background: rgba(0,0,0,0.2); border-radius: 8px; transition: transform 0.2s;">
+            <div style="font-size: 1.5rem;">🚀</div>
+            <div>
+              <div style="font-weight: 600; color: var(--color-primary);">Fast.ai: Practical Deep Learning for Coders</div>
+              <div style="font-size: 0.85rem; color: var(--color-text-secondary);">A top-down approach to deep learning – build first, theory later.</div>
+            </div>
+          </a>
+        </div>
+      </div>
     `,
   quiz: [
     {
