@@ -69,14 +69,7 @@ const Layout = ({ children, onHomeClick, onNavigate, activeView, totalModules = 
         { id: 'redis_home', label: '⚡ Redis', prefix: 'redis_' },
         { id: 'kafka_home', label: '📨 Kafka', prefix: 'kafka_' },
       ]
-    },
-    {
-      label: '🏗️ Engineering',
-      courses: [
-        { id: 'dsa_home', label: '📊 DSA', prefix: 'dsa_' },
-        { id: 'sd_home', label: '🏛️ System Design', prefix: 'sd_' },
-      ]
-    },
+    }
   ];
 
   const isAnyDropdownCourseActive = courseCategories.some(cat =>
@@ -119,7 +112,21 @@ const Layout = ({ children, onHomeClick, onNavigate, activeView, totalModules = 
                 className={`main-nav-link ${activeView === 'home' ? 'active' : ''}`}
                 onClick={() => onNavigate('home')}
               >
-                🎯 Roadmap
+                🎯 AI Roadmap
+              </button>
+
+              <button
+                className={`main-nav-link ${isCourseActive('sd_') ? 'active' : ''}`}
+                onClick={() => onNavigate('sd_home')}
+              >
+                🏛️ System Design
+              </button>
+
+              <button
+                className={`main-nav-link ${isCourseActive('dsa_') ? 'active' : ''}`}
+                onClick={() => onNavigate('dsa_home')}
+              >
+                📊 DSA
               </button>
 
               {/* Courses Dropdown */}
