@@ -129,9 +129,10 @@ const CoursePage = ({ title, description, journey, flatCurriculum, onModuleClick
                     const phaseEndIndex = phaseStartIndex + phase.modules.length;
 
                     // Count completed modules in this phase
-                    const phaseCompletedCount = phase.modules.reduce((count, _, i) => {
+                    const phaseCompletedCount = phase.modules.reduce((count, module) => {
                         // Use the global index for the module within this phase
-                        const globalIdx = flatCurriculum.findIndex(item => item.module.id === phase.modules[i].id);
+                        const item = flatCurriculum.find(item => item.module.id === module.id);
+                        const globalIdx = item ? item.globalIndex : -1;
                         return count + (completedModules.includes(globalIdx) ? 1 : 0);
                     }, 0);
 
@@ -226,8 +227,9 @@ const CoursePage = ({ title, description, journey, flatCurriculum, onModuleClick
                             {shouldExpand && (
                                 <div style={{ borderTop: '1px solid var(--color-border)' }}>
                                     {phase.modules.map((module, i) => {
-                                        // Find the global index for this specific module
-                                        const globalIndex = flatCurriculum.findIndex(item => item.module.id === module.id);
+                                        // Find the item in our pre-calculated list (which contains the global index)
+                                        const item = flatCurriculum.find(item => item.module.id === module.id);
+                                        const globalIndex = item ? item.globalIndex : -1;
                                         const isCompleted = completedModules.includes(globalIndex);
 
                                         // Determine if this is the 'current' module to continue
