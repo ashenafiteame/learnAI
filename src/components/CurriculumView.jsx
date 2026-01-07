@@ -33,20 +33,21 @@ const CurriculumView = ({ journey, flatCurriculum, completedModules, onModuleCli
         }));
     };
 
-    let moduleGlobalCounter = 0; // Only relevant if we are inferring indices (HomePage style)
+    let localModuleCounter = 0;
 
     return (
         <div style={{ padding: '0 1rem' }}>
             {journey.map((phase) => {
                 // Calculate phase statistics
+                // ... (keep existing calculation logic if needed, but we can simplify if we just want display)
+
+                // Re-calculate phase module count for progress bar
                 const phaseCompletedCount = phase.modules.reduce((count, module) => {
                     let globalIndex = -1;
                     if (isRichOne) {
                         const item = flatCurriculum.find(item => item.module.id === module.id);
                         globalIndex = item ? item.globalIndex : -1;
                     } else {
-                        // Assume strict order matching if naive array passed (HomePage)
-                        // This relies on the journey being in sync with flatCurriculum
                         const itemIndex = flatCurriculum.findIndex(m => m.id === module.id);
                         globalIndex = itemIndex;
                     }
@@ -58,14 +59,9 @@ const CurriculumView = ({ journey, flatCurriculum, completedModules, onModuleCli
                 const isPhaseStarted = phaseCompletedCount > 0;
 
                 // Auto-expand logic
-                // For HomePage, we might want different logic than CoursePage? 
-                // Actually they are similar: expand if active.
-
-                // We need to know if this phase contains the *next* module to learn to expand it.
-                // A phase is "active" if it's started but not complete.
                 const shouldExpand = expandedPhases[phase.id] !== undefined
                     ? expandedPhases[phase.id]
-                    : (isPhaseStarted && !isPhaseComplete); // simplified auto-expand
+                    : (isPhaseStarted && !isPhaseComplete);
 
                 return (
                     <div key={phase.id} style={{ marginBottom: '3rem', position: 'relative' }}>
@@ -120,6 +116,9 @@ const CurriculumView = ({ journey, flatCurriculum, completedModules, onModuleCli
                         {shouldExpand && (
                             <div style={{ marginTop: '1rem' }}>
                                 {phase.modules.map((module, i) => {
+                                    localModuleCounter++;
+                                    const displayIndex = localModuleCounter;
+
                                     let globalIndex = -1;
                                     let moduleData = module;
 
@@ -134,22 +133,6 @@ const CurriculumView = ({ journey, flatCurriculum, completedModules, onModuleCli
 
                                     const isCompleted = completedModules.includes(globalIndex);
                                     const isCurrent = globalIndex === nextModuleIndex;
-
-                                    // Calculate isCurrent logic...
-                                    // A module is current if it's the FIRST, UNCOMPLETED module in the list.
-                                    // But strictly speaking "Current Lesson" is usually global. 
-                                    // For now, let's treat "not completed" as potentially actionable. 
-                                    // But highlighting *every* uncompleted module is noisy.
-                                    // We usually want to highlight exactly one "Next Up".
-                                    // Let's pass "nextModuleIndex" as a prop? 
-                                    // Or just check if completedModules includes all previous ones?
-
-                                    // Simplest robust check: A module is "Current" if:
-                                    // 1. It is NOT completed.
-                                    // 2. All *previous* modules in this specific journey are completed? 
-                                    //    (This assumes linear progression enforced, which might not be true).
-
-                                    // Better: Pass `currentGlobalIndex` as a prop to this component.
 
                                     return (
                                         <div
@@ -182,11 +165,12 @@ const CurriculumView = ({ journey, flatCurriculum, completedModules, onModuleCli
                                                 display: 'flex',
                                                 alignItems: 'center',
                                                 justifyContent: 'center',
-                                                color: 'white',
+                                                color: isCompleted ? 'white' : 'var(--color-text-secondary)',
                                                 fontSize: '0.8rem',
-                                                flexShrink: 0
+                                                flexShrink: 0,
+                                                fontWeight: isCompleted ? 'bold' : 'normal'
                                             }}>
-                                                {isCompleted && '✓'}
+                                                {isCompleted ? '✓' : displayIndex}
                                             </div>
 
                                             <div style={{ flex: 1 }}>
