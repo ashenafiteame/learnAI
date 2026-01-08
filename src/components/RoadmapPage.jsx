@@ -176,6 +176,11 @@ const RoadmapPage = () => {
                         stack={['Python', 'Collaborative Filtering', 'Redis']}
                         desc="Track user behavior and serve personalized content recommendations."
                     />
+                    <ProjectCard
+                        title="Autonomous AI Agent (Tool Use)"
+                        stack={['LangChain', 'OpenAI/Anthropic', 'External APIs']}
+                        desc="Build an agent that can reason, plan, and execute multi-step tasks by calling external tools (e.g., Search, Database)."
+                    />
                 </div>
             </section>
 
