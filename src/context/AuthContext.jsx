@@ -13,6 +13,8 @@ export const useAuth = () => {
 export const AuthProvider = ({ children }) => {
     const [user, setUser] = useState(null);
     const [loading, setLoading] = useState(true);
+    const [showAuthModal, setShowAuthModal] = useState(false);
+    const [authMode, setAuthMode] = useState('login');
     const userRef = useRef(user);
 
     // Check for existing session on mount
@@ -115,6 +117,20 @@ export const AuthProvider = ({ children }) => {
         }
     }, []); // No dependencies needed - uses ref for current user
 
+    const openLogin = () => {
+        setAuthMode('login');
+        setShowAuthModal(true);
+    };
+
+    const openRegister = () => {
+        setAuthMode('register');
+        setShowAuthModal(true);
+    };
+
+    const closeAuthModal = () => {
+        setShowAuthModal(false);
+    };
+
     const value = {
         user,
         loading,
@@ -122,7 +138,12 @@ export const AuthProvider = ({ children }) => {
         logout,
         register,
         updateProgress,
-        isAuthenticated: !!user
+        isAuthenticated: !!user,
+        showAuthModal,
+        authMode,
+        openLogin,
+        openRegister,
+        closeAuthModal
     };
 
     return (

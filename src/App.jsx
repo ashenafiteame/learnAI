@@ -102,7 +102,7 @@ const courseConfigs = {
 const courseHomeViews = Object.keys(courseConfigs);
 
 function AppContent() {
-  const { user, updateProgress, isAuthenticated } = useAuth();
+  const { user, updateProgress, isAuthenticated, openLogin } = useAuth();
   const [activeModuleIndex, setActiveModuleIndex] = useState(-1);
   const [activeStandaloneCourse, setActiveStandaloneCourse] = useState(null);
   const [viewMode, setViewMode] = useState('lesson');
@@ -124,18 +124,29 @@ function AppContent() {
     }
   }, [completedModules, isAuthenticated, initialLoadDone, activeModuleIndex, updateProgress]);
 
+  const checkAuth = () => {
+    if (!isAuthenticated) {
+      openLogin();
+      return false;
+    }
+    return true;
+  };
+
   const startLearning = () => {
+    if (!checkAuth()) return;
     setActiveModuleIndex(0);
     setViewMode('lesson');
   };
 
   const goToModule = (index) => {
+    if (!checkAuth()) return;
     setActiveModuleIndex(index);
     setActiveStandaloneCourse(null);
     setViewMode('lesson');
   };
 
   const startStandaloneCourse = (course) => {
+    if (!checkAuth()) return;
     setActiveStandaloneCourse(course);
     setActiveModuleIndex('standalone');
     setViewMode('lesson');
@@ -201,13 +212,18 @@ function AppContent() {
     } else if (view === 'roadmap') {
       setActiveModuleIndex('roadmap');
       setActiveStandaloneCourse(null);
-    } else if (courseHomeViews.includes(view)) {
-      setActiveModuleIndex(view);
-      setActiveStandaloneCourse(null);
     } else {
-      const index = flatCurriculum.findIndex(c => c.id === view);
-      if (index !== -1) {
-        goToModule(index);
+      // All other views require auth
+      if (!checkAuth()) return;
+
+      if (courseHomeViews.includes(view)) {
+        setActiveModuleIndex(view);
+        setActiveStandaloneCourse(null);
+      } else {
+        const index = flatCurriculum.findIndex(c => c.id === view);
+        if (index !== -1) {
+          goToModule(index);
+        }
       }
     }
   };

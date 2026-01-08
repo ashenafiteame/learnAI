@@ -5,21 +5,19 @@ import AuthModal from './AuthModal';
 import './Navigation.css';
 
 const Layout = ({ children, onHomeClick, onNavigate, activeView, totalModules = 13 }) => {
-  const { user, logout, isAuthenticated } = useAuth();
-  const [showAuthModal, setShowAuthModal] = useState(false);
-  const [authMode, setAuthMode] = useState('login');
+  const {
+    user,
+    logout,
+    isAuthenticated,
+    showAuthModal,
+    closeAuthModal,
+    authMode,
+    openLogin,
+    openRegister
+  } = useAuth();
+
   const [showUserMenu, setShowUserMenu] = useState(false);
   const [showCoursesMenu, setShowCoursesMenu] = useState(false);
-
-  const openLogin = () => {
-    setAuthMode('login');
-    setShowAuthModal(true);
-  };
-
-  const openRegister = () => {
-    setAuthMode('register');
-    setShowAuthModal(true);
-  };
 
   const handleLogout = () => {
     logout();
@@ -281,7 +279,7 @@ const Layout = ({ children, onHomeClick, onNavigate, activeView, totalModules = 
 
       <AuthModal
         isOpen={showAuthModal}
-        onClose={() => setShowAuthModal(false)}
+        onClose={closeAuthModal}
         initialMode={authMode}
       />
     </div>
