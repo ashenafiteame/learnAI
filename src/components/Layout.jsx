@@ -117,7 +117,7 @@ const Layout = ({ children, onHomeClick, onNavigate, activeView, totalModules = 
                 className={`main-nav-link ${activeView === 'home' ? 'active' : ''}`}
                 onClick={() => onNavigate('home')}
               >
-                🎯 AI Roadmap
+                🤖 AI Course
               </button>
 
               <button
