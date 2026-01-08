@@ -93,6 +93,10 @@ const RoadmapPage = () => {
                         title="Math Foundations (Practical)"
                         desc="You don't need academic depth — you need intuition."
                         items={['Linear Algebra: vectors, matrices', 'Probability: distributions, variance', 'Calculus: gradients, optimization']}
+                        links={[
+                            { label: "3Blue1Brown - Linear Algebra", url: "https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab" },
+                            { label: "Coursera - Math for ML", url: "https://www.coursera.org/specializations/mathematics-machine-learning" }
+                        ]}
                     />
                     <LayerCard
                         number="2"
@@ -100,18 +104,31 @@ const RoadmapPage = () => {
                         desc="The non-negotiable toolbelt of AI."
                         items={['NumPy (Numerical computation)', 'Pandas (Data manipulation)', 'Matplotlib/Seaborn (Visualization)']}
                         quote="Mental Model: Pandas = SQL + Streams + DTOs in one tool."
+                        links={[
+                            { label: "Kaggle Learn - Python", url: "https://www.kaggle.com/learn/python" },
+                            { label: "Pandas User Guide", url: "https://pandas.pydata.org/docs/user_guide/index.html" }
+                        ]}
                     />
                     <LayerCard
                         number="3"
                         title="Core Machine Learning"
                         desc="80% of ML success comes from data and features, not algorithms."
                         items={['Supervised vs Unsupervised', 'Regression vs Classification', 'Bias-Variance Tradeoff', 'Model Evaluation (Precision/Recall)']}
+                        links={[
+                            { label: "Andrew Ng's Machine Learning Specialization", url: "https://www.coursera.org/specializations/machine-learning-introduction" },
+                            { label: "Google Machine Learning Crash Course", url: "https://developers.google.com/machine-learning/crash-course" }
+                        ]}
                     />
                     <LayerCard
                         number="4"
                         title="Deep Learning Foundations"
                         desc="The engine behind modern AI."
                         items={['Neural Networks (MLP)', 'CNNs & RNNs', 'Transformers & Attention (Critical)', 'PyTorch (Industry Standard)']}
+                        links={[
+                            { label: "Fast.ai - Practical Deep Learning", url: "https://course.fast.ai/" },
+                            { label: "DeepLearning.AI - Deep Learning Specialization", url: "https://www.coursera.org/specializations/deep-learning" },
+                            { label: "PyTorch 60 Minute Blitz", url: "https://pytorch.org/tutorials/beginner/deep_learning_60min_blitz.html" }
+                        ]}
                     />
                     <LayerCard
                         number="5"
@@ -119,12 +136,21 @@ const RoadmapPage = () => {
                         desc="Where the current market demand is strongest."
                         items={['Prompt Engineering', 'Vector Databases (Pinecone, Weaviate)', 'RAG (Retrieval-Augmented Generation)', 'Fin-tuning vs Inference']}
                         highlight
+                        links={[
+                            { label: "DeepLearning.AI - Generative AI with LLMs", url: "https://www.coursera.org/learn/generative-ai-with-llms" },
+                            { label: "Pinecone Learning Center", url: "https://www.pinecone.io/learn/" },
+                            { label: "LangChain Documentation", url: "https://python.langchain.com/docs/get_started/introduction" }
+                        ]}
                     />
                     <LayerCard
                         number="6"
                         title="MLOps (The Holy Grail)"
                         desc="CI/CD for data and models. Your backend skills shine here."
                         items={['Model Versioning & Registry', 'Training Pipelines', 'Drift Detection', 'A/B Testing Models']}
+                        links={[
+                            { label: "Full Stack Deep Learning", url: "https://fullstackdeeplearning.com/" },
+                            { label: "MLOps Zoomcamp", url: "https://github.com/DataTalksClub/mlops-zoomcamp" }
+                        ]}
                     />
                 </div>
             </section>
@@ -212,7 +238,7 @@ const RoadmapPage = () => {
 };
 
 // Helper Components
-const LayerCard = ({ number, title, desc, items, highlight, quote }) => (
+const LayerCard = ({ number, title, desc, items, highlight, quote, links }) => (
     <div style={{
         display: 'flex',
         gap: '1.5rem',
@@ -251,6 +277,35 @@ const LayerCard = ({ number, title, desc, items, highlight, quote }) => (
             {quote && (
                 <div style={{ marginTop: '1rem', fontSize: '0.9rem', fontStyle: 'italic', color: 'var(--color-text-secondary)', opacity: 0.8 }}>
                     {quote}
+                </div>
+            )}
+            {links && links.length > 0 && (
+                <div style={{ marginTop: '1.5rem', paddingTop: '1rem', borderTop: '1px solid var(--color-border)' }}>
+                    <div style={{ fontSize: '0.85rem', fontWeight: '600', color: 'var(--color-text-secondary)', marginBottom: '0.5rem', textTransform: 'uppercase', letterSpacing: '0.5px' }}>
+                        Recommended Resources:
+                    </div>
+                    <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.75rem' }}>
+                        {links.map((link, i) => (
+                            <a
+                                key={i}
+                                href={link.url}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                style={{
+                                    fontSize: '0.9rem',
+                                    color: 'var(--color-primary)',
+                                    textDecoration: 'none',
+                                    display: 'flex',
+                                    alignItems: 'center',
+                                    gap: '0.25rem'
+                                }}
+                                onMouseOver={(e) => e.target.style.textDecoration = 'underline'}
+                                onMouseOut={(e) => e.target.style.textDecoration = 'none'}
+                            >
+                                🔗 {link.label}
+                            </a>
+                        ))}
+                    </div>
                 </div>
             )}
         </div>
