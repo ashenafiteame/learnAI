@@ -275,7 +275,7 @@ const Layout = ({ children, onHomeClick, onNavigate, activeView, totalModules = 
         <div className="container">
           <p>&copy; {new Date().getFullYear()} AI Learner. Create your future.</p>
           <div style={{ marginTop: '0.5rem', fontSize: '0.9rem', opacity: 0.8 }}>
-            Created by Ashenafi Teame • <a href="mailto:ashenafiteame@gmail.com" style={{ color: 'inherit', textDecoration: 'underline' }}>ashenafiteame@gmail.com</a>
+            Created by Ashenafi • <a href="mailto:ashenafitm@gmail.com" style={{ color: 'inherit', textDecoration: 'underline' }}>ashenafitm@gmail.com</a>
           </div>
         </div>
       </footer>
