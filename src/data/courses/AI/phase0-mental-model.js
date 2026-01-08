@@ -205,7 +205,7 @@ model.predict(newCatPhoto);  // → "cat" (hopefully!)</code></pre>
             </div>
           </a>
           
-          <a href="https://elements.withgoogle.com/" target="_blank" style="text-decoration: none; color: inherit; display: flex; align-items: center; gap: 1rem; padding: 1rem; background: rgba(0,0,0,0.2); border-radius: 8px; transition: transform 0.2s;">
+          <a href="https://www.elementsofai.com/" target="_blank" style="text-decoration: none; color: inherit; display: flex; align-items: center; gap: 1rem; padding: 1rem; background: rgba(0,0,0,0.2); border-radius: 8px; transition: transform 0.2s;">
             <div style="font-size: 1.5rem;">🌐</div>
             <div>
               <div style="font-weight: 600; color: var(--color-primary);">Elements of AI</div>

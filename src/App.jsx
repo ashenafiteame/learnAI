@@ -6,6 +6,7 @@ import LessonView from './components/LessonView'
 import QuizView from './components/QuizView'
 import HomePage from './components/HomePage'
 import CoursePage from './components/CoursePage'
+import RoadmapPage from './components/RoadmapPage'
 import { journey, flatCurriculum as flatAICurriculum } from './data/journey'
 import { dsaJourney, flatDSACurriculum } from './data/courses/DSA/dsa-journey'
 import { systemDesignJourney, flatSystemDesignCurriculum } from './data/courses/SystemDesign/system-design-journey'
@@ -197,6 +198,9 @@ function AppContent() {
   const handleNavigate = (view) => {
     if (view === 'home') {
       goHome();
+    } else if (view === 'roadmap') {
+      setActiveModuleIndex('roadmap');
+      setActiveStandaloneCourse(null);
     } else if (courseHomeViews.includes(view)) {
       setActiveModuleIndex(view);
       setActiveStandaloneCourse(null);
@@ -233,6 +237,20 @@ function AppContent() {
           onCourseClick={startStandaloneCourse}
           completedModules={completedModules}
         />
+      </Layout>
+    );
+  }
+
+  // Roadmap Page
+  if (activeModuleIndex === 'roadmap') {
+    return (
+      <Layout
+        onHomeClick={goHome}
+        onNavigate={handleNavigate}
+        activeView="roadmap"
+        totalModules={flatCurriculum.length}
+      >
+        <RoadmapPage />
       </Layout>
     );
   }

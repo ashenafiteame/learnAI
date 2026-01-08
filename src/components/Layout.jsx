@@ -116,6 +116,13 @@ const Layout = ({ children, onHomeClick, onNavigate, activeView, totalModules = 
               </button>
 
               <button
+                className={`main-nav-link ${activeView === 'roadmap' ? 'active' : ''}`}
+                onClick={() => onNavigate('roadmap')}
+              >
+                🗺️ Guide
+              </button>
+
+              <button
                 className={`main-nav-link ${isCourseActive('sd_') ? 'active' : ''}`}
                 onClick={() => onNavigate('sd_home')}
               >
